@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div class="container">
+        <form [formGroup]="myOrder" (ngSubmit)="submitClick()">
+            <h2>Form Details</h2>
+                <label for="customerName">Customer Name</label> &nbsp;
+                <input type="text" formControlName="customerName"> <br/>
+                
+                <igx-date-picker formControlName="date" mode="dialog" [inputFormat]="'yyyy-mm-dd'" [displayFormat]="'shortDate'">
+                    <label igxLabel>Date</label>
+                </igx-date-picker><br/>
+                <label for="totalAmt">Total Amount</label>&nbsp;
+                <input type="number" formControlName="totalAmount"><br/>
+                <label for="status">Status</label>&nbsp;
+                <input type="text" formControlName="status"><br/>
+            <button type="submit">submit</button>
+        </form>
+        </div>
+</body>
+</html>
